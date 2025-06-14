@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const Wrapper = styled.section`
-    margin: 200px 100px;
+    margin-top: 100px;
     color: white;
     h1{
         text-align: center;
-        font-size: 50px;
+        font-size: 25px;
         margin-bottom: 0;
         strong{
             color: #cd5ff8;
@@ -14,24 +14,27 @@ const Wrapper = styled.section`
 
     .sub-heading{
         text-align: center;
-        font-size: 25px;
+        font-size: 18px;
         margin-top: 0;
     }
     .main-container{
         display: flex;
         padding: 30px;
         flex-wrap: wrap;
+        justify-content: space-around;
         div{
             border: solid white 2px;
-            box-shadow: 0 4px 8px 0 #cd5ff8, 0 6px 20px 0 #cd5ff8;
+            box-shadow: 0 4px 4px 0 #cd5ff8, 0 4px 4px 0 #cd5ff8;
             padding: 20px;
             text-align: center;
             align-items: center;
-            height: 400px;
+            /* height: 300px; */
             width: 300px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-bottom: 40px;
-            margin-right: 60px;
+            margin-bottom: 80px;
+            p{
+                font-size: 12px;
+            }
         }
         div:hover{
             border: #cd5ff8 2px solid;
@@ -40,13 +43,20 @@ const Wrapper = styled.section`
         }
     }
     .parkify{
-        height: 300px;
-        margin-top: -80px;
-        margin-bottom: -95px;
+        height: 180px;
+        margin-top: -60px;
+        margin-bottom: -45px;
     }
     .mayoor{
-        height: 200px;
-        margin-bottom: -30px;
+        height: 120px;
+        margin-top: -10px;
+        margin-bottom: -10px;
     }
+    img{
+        height: 80px;
+    }
+
+    
+    
 `
 export default Wrapper
