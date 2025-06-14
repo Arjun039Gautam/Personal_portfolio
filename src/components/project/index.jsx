@@ -50,7 +50,7 @@ const Project = () => {
         </div>
         <div onClick={() => handleExternalNavigation('https://mayoor-web.vercel.app')} style={{ cursor: 'pointer' }}>
           <img src={mayoorIcon} alt="" className='mayoor'/>
-          <p>Parkify : A Parking Web App</p>
+          <p>Parkify : Mayoor+</p>
           <p>Tech Stack: React.js, CSS<br /><br/>
             Currently working as part of the frontend team on Mayoor+, a web app for Mayoor School, focusing on building a user-friendly interface and enhancing the overall user experience.
           </p>
