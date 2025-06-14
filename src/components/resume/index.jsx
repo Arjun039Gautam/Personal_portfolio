@@ -1,6 +1,6 @@
 import React from 'react'
 import Wrapper from './style'
-import resume from '../images/resume.png'
+import resume from '../images/Arjun-Gautam_resume.jpg'
 
 const Resume = () => {
   return (
