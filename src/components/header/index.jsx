@@ -1,30 +1,39 @@
-import React from 'react'
-import Wrapper from './style'
-import { NavLink } from 'react-router-dom'
-import logo from '../images/Screenshot_2025-04-01_004200-removebg-preview.png'
+import React, { useState } from 'react';
+import Wrapper from './style';
+import { NavLink } from 'react-router-dom';
+import github from '../images/github (1).png';
+import linkedin from '../images/linkedin.png';
+import insta from '../images/instagram.png';
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <Wrapper> 
+    <Wrapper>
       <nav>
-        <img src={logo} alt="" />
-        <ul>
-          <li>
-            <NavLink to='/' activeClassName="active">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to='/about' activeClassName="active">About</NavLink>
-          </li>
-          <li>
-            <NavLink to='/project' activeClassName="active">Projects</NavLink>
-          </li>
-          <li>
-            <NavLink to='/resume' activeClassName="active">Resume</NavLink>
-          </li>
+        {/* Word Links (toggle in mobile only) */}
+        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          <span />
+          <span />
+          <span />
+        </div>
+
+        <ul className={`word ${menuOpen ? 'show' : ''}`}>
+          <li><NavLink to="/" activeClassName="active" onClick={() => setMenuOpen(false)}>Home</NavLink></li>
+          <li><NavLink to="/about" activeClassName="active" onClick={() => setMenuOpen(false)}>About</NavLink></li>
+          <li><NavLink to="/project" activeClassName="active" onClick={() => setMenuOpen(false)}>Projects</NavLink></li>
+          <li><NavLink to="/certificates" activeClassName="active" onClick={() => setMenuOpen(false)}>Certificates</NavLink></li>
+        </ul>
+
+        {/* Social Icons – always visible */}
+        <ul className='icon'>
+          <li><a href="https://github.com/Arjun039Gautam"><img src={github} alt="GitHub" /></a></li>
+          <li><a href="https://www.linkedin.com/in/arjun-gautam-52a752283/"><img src={linkedin} alt="LinkedIn" /></a></li>
+          <li><a href="https://www.instagram.com/arjun._.gautam_/?hl=en"><img src={insta} alt="Instagram" /></a></li>
         </ul>
       </nav>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

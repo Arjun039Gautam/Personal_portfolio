@@ -1,10 +1,11 @@
 import { React, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Wrapper from './style';
 import github from '../images/github (1).png';
 import linkedin from '../images/linkedin.png';
 import insta from '../images/instagram.png';
 import profilephoto from '../images/arjun2 (1).jpg';
-import image from '../images/download.png';
+import image from '../images/arjun_pic2-removebg-preview.png';
 
 const Home = () => {
   const lines = [
@@ -62,7 +63,7 @@ const Home = () => {
 
   return (
     <Wrapper>
-      <div className='container'>
+      {/* <div className='container'>
         <div className='profile'>
           <img src={profilephoto} alt="Profile" />
         </div>
@@ -74,7 +75,6 @@ const Home = () => {
           </p>
           <div>
             <div className='textWrapper'>
-              {/* Blank screen effect */}
               {isBlank ? "" : lines[lineIndex].substring(0, charIndex)}
               <span className='cursor'>|</span>
             </div>
@@ -100,7 +100,22 @@ const Home = () => {
           <a href="https://www.linkedin.com/in/arjun-gautam-52a752283/"><img src={linkedin} alt="LinkedIn" /></a>
           <a href="https://www.instagram.com/arjun._.gautam_/?hl=en"><img src={insta} alt="Instagram" /></a>
         </div>
-      </div>
+      </div> */}
+      <main className="hero">
+        <div className="hero-image">
+          <img src={image} alt="Tech" />
+        </div>
+        <div className="hero-text">
+          <h1>Hi, I’m <br /><span>Arjun Gautam</span></h1>
+          <h2>Frontend Developer | React Enthusiast</h2>
+          <div className="buttons">
+            <a href="https://drive.google.com/file/d/1n0hi0vwb-MS66bqUstdMxyBCYQ_H-vRO/view?usp=sharing" className="btn primary">Download Resume</a>
+            <Link to="/project" className="btn outline">View Projects</Link>
+          </div>
+        </div>
+
+        
+      </main>
     </Wrapper>
   );
 }

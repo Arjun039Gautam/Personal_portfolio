@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-    color: white;
+    /* color: white;
     margin-left: 30px;
     .container{
         display: flex;
@@ -34,8 +34,8 @@ const Wrapper = styled.div`
         width: 200px;
         border: 5px solid white;
         img{
-            width: 100%;    /* Make the image fill the div horizontally */
-            height: 100%;   /* Make the image fill the div vertically */
+            width: 100%;   
+            height: 100%;   
             object-fit: cover; 
             border-radius: 50%;
         }
@@ -194,8 +194,123 @@ const Wrapper = styled.div`
     height: 30px;
     margin: 5px;
   }
+} */
+
+/* Hero Section */
+.hero {
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  justify-content: center;
+  padding: 10px 60px;
+  flex-wrap: wrap;
+  color: #ffffff;
+  gap: 150px;
+}
+.hero-text{
+  animation: fadeIn 1.5s ease;
+}
+.hero-text h1 {
+  font-size: 72px;
+  font-weight: 700;
+}
+.hero-text h2 {
+  margin-top: -15px;
+  color:rgb(203, 195, 195);
 }
 
+.hero-text h1 span {
+  color: #c77dff;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn.primary {
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+  background: none;
+}
+
+.btn.primary:hover {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.btn.outline {
+  border: 2px solid #c77dff;
+  color: #c77dff;
+  background: none;
+  margin-left: 20px;
+}
+
+.btn.outline:hover {
+  background: #c77dff;
+  color: #ffffff;
+}
+.hero-image img {
+  height: 850px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 10px;
+    gap: 40px;
+    margin-top: 50px;
+  }
+
+  .hero-image img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    margin: 20px 0;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .hero-text h2 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #ccc;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .btn {
+    width: 90%;
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .btn.outline {
+    margin-left: 0;
+  }
+}
 
 `
 

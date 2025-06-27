@@ -1,62 +1,158 @@
 import styled from "styled-components";
 
 const Wrapper = styled.section`
-    margin-top: 100px;
-    color: white;
-    h1{
-        text-align: center;
-        font-size: 25px;
-        margin-bottom: 0;
-        strong{
-            color: #cd5ff8;
-        }       
+margin-top: 80px;
+  padding: 60px 20px;
+  color: #ffffff;
+
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    animation: fadeUp 1s ease;
+
+    strong {
+      color: #cd5ff8;
+    }
+  }
+
+  .sub-heading {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    color: #cccccc;
+    animation: fadeUp 1.5s ease;
+  }
+
+  .main-container {
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 30px;
+  }
+
+  .main-container > div {
+    position: relative; /* Added */
+    background: rgba(31, 31, 58, 0.85);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 2px solid transparent;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    animation: fadeUp 1.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 300px; /* Flexible height */
+    box-sizing: border-box; /* Include padding in height */
+  }
+
+  .main-container > div::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(205, 95, 248, 0.2) 0%, transparent 60%);
+    transform: rotate(25deg);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0; /* Behind content */
+    pointer-events: none; /* Don't block clicks */
+  }
+
+  .main-container > div:hover::before {
+    opacity: 1;
+  }
+
+  .main-container > div:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 25px #cd5ff8;
+    border-color: #cd5ff8;
+    z-index: 1; /* On top */
+  }
+
+  .main-container > div p {
+    font-size: 14px;
+    color: #cccccc;
+    margin: 10px 0;
+    line-height: 1.4;
+    position: relative;
+    z-index: 2; /* Above glow */
+  }
+
+  .main-container > div p strong {
+    font-size: 16px;
+    color: #cd5ff8;
+  }
+
+  .main-container img {
+    height: 80px;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
+    object-fit: contain;
+    position: relative;
+    z-index: 2; /* Above glow */
+  }
+
+  .main-container > div:hover img {
+    transform: scale(1.1);
+  }
+
+  .main-container img.parkify {
+    height: 200px;
+    margin-top: -60px;
+    margin-bottom: -50px;
+  }
+
+  .main-container img.mayoor {
+    height: 120px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .main-container {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 32px;
     }
 
-    .sub-heading{
-        text-align: center;
-        font-size: 18px;
-        margin-top: 0;
-    }
-    .main-container{
-        display: flex;
-        padding: 30px;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        div{
-            border: solid white 2px;
-            box-shadow: 0 4px 4px 0 #cd5ff8, 0 4px 4px 0 #cd5ff8;
-            padding: 20px;
-            text-align: center;
-            align-items: center;
-            /* height: 300px; */
-            width: 300px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-bottom: 80px;
-            p{
-                font-size: 12px;
-            }
-        }
-        div:hover{
-            border: #cd5ff8 2px solid;
-            transform: scale(1.1); /* Increases size */
-            box-shadow: 0 0 15px white;
-        }
-    }
-    .parkify{
-        height: 180px;
-        margin-top: -60px;
-        margin-bottom: -45px;
-    }
-    .mayoor{
-        height: 120px;
-        margin-top: -10px;
-        margin-bottom: -10px;
-    }
-    img{
-        height: 80px;
+    .sub-heading {
+      font-size: 16px;
     }
 
-    
-    
-`
-export default Wrapper
+    .main-container {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 10px;
+    }
+  }
+`;
+
+export default Wrapper;
