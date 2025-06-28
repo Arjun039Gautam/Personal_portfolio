@@ -561,6 +561,7 @@ const Wrapper = styled.section`
     align-items: center;
     gap: 15px;
     margin-top: 20px;
+    margin-bottom: 30px;
   }
 
   .fact-card {

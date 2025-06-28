@@ -260,7 +260,7 @@ const Wrapper = styled.div`
   color: #ffffff;
 }
 .hero-image img {
-  height: 850px;
+  height: 655px;
   width: 100%;
 }
 

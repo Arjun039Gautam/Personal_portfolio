@@ -1,12 +1,18 @@
-import React from 'react'
-import Wrapper from './style'
+// Footer.jsx
+import React from 'react';
+import Wrapper from './style';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
     <Wrapper>
-      <p>&copy; Copyrights 2025</p>
+      <div className="footer-content">
+        <p>© {year} Arjun Gautam. All rights reserved.</p>
+      </div>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

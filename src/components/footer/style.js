@@ -1,18 +1,30 @@
-import styled from "styled-components";
+// style.js
+import styled from 'styled-components';
 
-const Wrapper = styled.footer `
-    text-align : center;
-    height: 40px;
+const Wrapper = styled.footer`
+  width: 100%;
+  padding: 10px 20px;
+  position: fixed;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  color: #aaa;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+
+  .footer-content {
     width: 100%;
-    position: fixed;
-    bottom: 0px;
-    backdrop-filter: blur(20px);
-    background-color: rgba(255, 255, 255, 0.1);
-    color:rgb(166, 161, 161);
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px;
-`
-export default Wrapper
+    max-width: 1200px;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
+`;
+
+export default Wrapper;

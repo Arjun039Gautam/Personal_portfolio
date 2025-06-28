@@ -7,12 +7,13 @@ const Wrapper = styled.header`
   z-index: 999;
   background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
   nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 20px;
+    padding: 2px 20px;
   }
 
   .hamburger {
@@ -35,7 +36,7 @@ const Wrapper = styled.header`
     justify-content: space-around;
     list-style: none;
     a{
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 
@@ -46,7 +47,7 @@ const Wrapper = styled.header`
   }
 
   img {
-    height: 40px;
+    height: 30px;
   }
 
   nav ul li a {

@@ -36,6 +36,7 @@ const Wrapper = styled.section`
     justify-content: center;
     perspective: 1500px;
     transform-style: preserve-3d;
+    margin-bottom: 60px;
   }
 
   .slide {
@@ -46,8 +47,8 @@ const Wrapper = styled.section`
   }
 
   .slide img {
-    width: 500px;
-    height: 320px;
+    width: 400px;
+    height: auto;
     object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
