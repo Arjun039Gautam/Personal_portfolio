@@ -24,7 +24,7 @@ const Header = () => {
           <li><NavLink to="/project" activeClassName="active" onClick={() => setMenuOpen(false)}>Projects</NavLink></li>
           <li><NavLink to="/certificates" activeClassName="active" onClick={() => setMenuOpen(false)}>Certificates</NavLink></li>
           <li><a href="mailto:arjungautam3007@gmail.com">Contact</a></li>
-        </ul>ary
+        </ul>
 
         {/* Social Icons – always visible */}
         <ul className='icon'>

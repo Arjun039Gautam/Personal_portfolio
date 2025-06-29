@@ -1,205 +1,10 @@
 import styled from "styled-components";
 
 const Wrapper = styled.div`
-    /* color: white;
-    margin-left: 30px;
-    .container{
-        display: flex;
-        margin: 150px 0 0 100px;
-        gap: 100px;
-    }
-    .home-header{
-        font-size: 25px;
-    }
-    .main-name{
-        color: #cd5ff8;
-        margin-left: 10px;
-    }
-    .image{
-        width: 300px;
-    }
-    .image img{
-        height: 200px;
-        margin: 20px auto 0;
-    }
-    .description{
-        margin: 70px auto;
-        display: flex;
-        justify-content: space-evenly;
-    }
-    .profile{
-        background-color: white;
-        border-radius: 50%;
-        height: 200px;
-        width: 200px;
-        border: 5px solid white;
-        img{
-            width: 100%;   
-            height: 100%;   
-            object-fit: cover; 
-            border-radius: 50%;
-        }
-    }
-    .intro{
-        text-align: left;
-        font-size: 20px;
-    }
-    .heading{
-        font-size: 25px;
-        span{
-            color: #cd5ff8;
-        }
-    }
-    .social-link{
-        text-align: center;
-        font-size: 20px;
-        margin-bottom: 100px;
-        p{
-            margin: 0;
-            padding: 0;  
-            span{
-                color: #cd5ff8;
-            }
-        }
-    }
-    .social-heading{
-        font-size: 25px;
-        margin: 0;
-        padding: 0;
-    }
-    .icon-div{
-        height: 50px;
-        width: 30%;
-        margin: 20px auto;
-        display: flex;
-        justify-content: space-evenly;
-        img{
-            height: 40px;
-        }
-    }
-    .textWrapper{
-        font-size: 22px;
-        white-space: nowrap;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        color: #cd5ff8;
-    }
-    .cursor{
-        display: inline-block;
-        animation: blink 0.7s steps(2, start) infinite;
-        color: #c77dff;
-
-        @keyframes blink {
-            0% {
-            opacity: 1;
-            }
-            50% {
-            opacity: 0;
-            }
-            100% {
-            opacity: 1;
-            }
-        }
-    }
-    @media screen and (max-width: 600px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-    margin: 120px 10px 0 10px;
-    gap: 30px;
-    text-align: center;
-  }
-
-  .profile {
-    height: 140px;
-    width: 140px;
-    border: 3px solid white;
-    margin-bottom: 10px;
-  }
-
-  .profile img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-
-  .home-header {
-    font-size: 18px;
-    margin-top: 10px;
-  }
-
-  .heading-name {
-    font-size: 20px;
-  }
-
-  .main-name {
-    margin-left: 5px;
-  }
-
-  .textWrapper {
-    font-size: 16px;
-    margin-top: 5px;
-  }
-
-  .description {
-    flex-direction: column;
-    align-items: center;
-    margin: 40px 10px;
-    gap: 20px;
-    text-align: center;
-  }
-
-  .intro {
-    font-size: 16px;
-    line-height: 1.5;
-  }
-
-  .heading {
-    font-size: 18px;
-  }
-
-  .image {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .image img {
-    height: auto;
-    width: 80%;
-    max-width: 300px;
-    margin-top: 10px;
-  }
-
-  .social-link {
-    font-size: 16px;
-    margin: 50px 10px;
-  }
-
-  .social-heading {
-    font-size: 18px;
-  }
-
-  .icon-div {
-    width: 80%;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-top: 10px;
-    margin-bottom: 80px;
-  }
-
-  .icon-div img {
-    height: 30px;
-    margin: 5px;
-  }
-} */
 
 /* Hero Section */
 .hero {
   display: flex;
-  /* justify-content: space-around; */
   align-items: center;
   justify-content: center;
   padding: 10px 60px;
@@ -207,16 +12,19 @@ const Wrapper = styled.div`
   color: #ffffff;
   gap: 150px;
 }
-.hero-text{
+
+.hero-text {
   animation: fadeIn 1.5s ease;
 }
+
 .hero-text h1 {
   font-size: 72px;
   font-weight: 700;
 }
+
 .hero-text h2 {
   margin-top: -15px;
-  color:rgb(203, 195, 195);
+  color: rgb(203, 195, 195);
 }
 
 .hero-text h1 span {
@@ -259,11 +67,36 @@ const Wrapper = styled.div`
   background: #c77dff;
   color: #ffffff;
 }
+
 .hero-image img {
   height: 655px;
   width: 100%;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  animation: none;
 }
 
+/* Keyframes for mobile glow */
+@keyframes techyGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(199, 125, 255, 0.3),
+                0 0 60px rgba(199, 125, 255, 0.1),
+                0 0 100px rgba(199, 125, 255, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(199, 125, 255, 0.4),
+                0 0 80px rgba(199, 125, 255, 0.2),
+                0 0 120px rgba(199, 125, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(199, 125, 255, 0.3),
+                0 0 60px rgba(199, 125, 255, 0.1),
+                0 0 100px rgba(199, 125, 255, 0.05);
+  }
+}
+
+/* Mobile styles */
 @media (max-width: 600px) {
   .hero {
     flex-direction: column;
@@ -271,16 +104,41 @@ const Wrapper = styled.div`
     text-align: center;
     padding: 30px 10px;
     gap: 40px;
-    margin-top: 50px;
+    margin-top: 60px;
+  }
+
+  .hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero-image::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(199, 125, 255, 0.4) 0%, rgba(6, 6, 25, 1) 70%);
+    filter: blur(25px);
+    z-index: 0;
   }
 
   .hero-image img {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #ffffff;
-    margin: 20px 0;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    animation: techyGlow 3s ease-in-out infinite;
   }
 
   .hero-text h1 {
@@ -312,7 +170,6 @@ const Wrapper = styled.div`
     margin-left: 0;
   }
 }
+`;
 
-`
-
-export default Wrapper
+export default Wrapper;

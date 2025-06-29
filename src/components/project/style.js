@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 const Wrapper = styled.section`
-margin-top: 80px;
+  margin-top: 80px;
   padding: 60px 20px;
   color: #ffffff;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
 
   h1 {
     text-align: center;
@@ -36,11 +37,11 @@ margin-top: 80px;
   }
 
   .main-container > div {
-    position: relative; /* Added */
-    background: rgba(31, 31, 58, 0.85);
+    position: relative;
+    background: linear-gradient(145deg, #1f1f3a 0%, #2d2d5a 100%);
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border: 2px solid transparent;
+    border: 2px solid rgba(205, 95, 248, 0.1);
     padding: 20px;
     text-align: center;
     cursor: pointer;
@@ -50,8 +51,9 @@ margin-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 300px; /* Flexible height */
-    box-sizing: border-box; /* Include padding in height */
+    min-height: 320px;
+    box-sizing: border-box;
+    backdrop-filter: blur(6px);
   }
 
   .main-container > div::before {
@@ -65,8 +67,8 @@ margin-top: 80px;
     transform: rotate(25deg);
     opacity: 0;
     transition: opacity 0.5s ease;
-    z-index: 0; /* Behind content */
-    pointer-events: none; /* Don't block clicks */
+    z-index: 0;
+    pointer-events: none;
   }
 
   .main-container > div:hover::before {
@@ -77,16 +79,16 @@ margin-top: 80px;
     transform: scale(1.06);
     box-shadow: 0 0 25px #cd5ff8;
     border-color: #cd5ff8;
-    z-index: 1; /* On top */
+    z-index: 1;
   }
 
   .main-container > div p {
     font-size: 14px;
     color: #cccccc;
     margin: 10px 0;
-    line-height: 1.4;
+    line-height: 1.6;
     position: relative;
-    z-index: 2; /* Above glow */
+    z-index: 2;
   }
 
   .main-container > div p strong {
@@ -100,7 +102,8 @@ margin-top: 80px;
     transition: transform 0.4s ease;
     object-fit: contain;
     position: relative;
-    z-index: 2; /* Above glow */
+    z-index: 2;
+    filter: drop-shadow(0 0 10px rgba(205, 95, 248, 0.3));
   }
 
   .main-container > div:hover img {
@@ -119,7 +122,6 @@ margin-top: 80px;
     margin-bottom: -10px;
   }
 
-  /* Animations */
   @keyframes fadeUp {
     from {
       opacity: 0;
@@ -153,6 +155,22 @@ margin-top: 80px;
       padding: 10px;
     }
   }
+
+  .github-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #cd5ff8;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.github-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 `;
 
 export default Wrapper;

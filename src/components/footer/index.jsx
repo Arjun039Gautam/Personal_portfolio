@@ -1,7 +1,4 @@
-// Footer.jsx
-import React from 'react';
 import Wrapper from './style';
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const year = new Date().getFullYear();
