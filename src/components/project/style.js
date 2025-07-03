@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Wrapper = styled.section`
-  margin-top: 80px;
+  margin-top: 10px;
   padding: 60px 20px;
   color: #ffffff;
   font-family: 'Poppins', 'Segoe UI', sans-serif;

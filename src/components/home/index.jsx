@@ -13,7 +13,7 @@ const Home = () => {
           <h1>Hi, I’m <br /><span>Arjun Gautam</span></h1>
           <h2>Frontend Developer | React Enthusiast</h2>
           <div className="buttons">
-            <a href="https://drive.google.com/uc?export=download&id=1n0hi0vwb-MS66bqUstdMxyBCYQ_H-vRO" className="btn primary">Download Resume</a>
+            <a href="https://drive.google.com/uc?export=download&id=1lSctmAT_p-mrYfecYcS9H8vlJpt3FSfq" className="btn primary">Download Resume</a>
             <Link to="/project" className="btn outline">View Projects</Link>
           </div>
         </div>

@@ -66,10 +66,49 @@ const Wrapper = styled.section`
     }
 
     .slide img {
-      width: 230px;
-      height: 170px;
+      width: 210px;
+      height: 150px;
     }
   }
+
+  button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  font-size: 32px;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 3;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+button.prev {
+  left: 20px;
+}
+
+button.next {
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+  button.prev,
+  button.next {
+    font-size: 24px;
+    padding: 6px 10px;
+    top: 75%;
+  }
+}
+
 `;
 
 export default Wrapper;

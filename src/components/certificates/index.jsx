@@ -8,18 +8,23 @@ import cert5 from "../images/java_certificate.png";
 import cert6 from "../images/python_certificate.png";
 import cert7 from "../images/gfg_participation.png";
 
-const Certificates   = () => {
+const Certificates = () => {
   const certificates = [cert1, cert2, cert3, cert4, cert5, cert6, cert7];
   const [activeIndex, setActiveIndex] = useState(0);
   const total = certificates.length;
   const angleStep = 360 / total;
 
+  // Auto slide
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % total);
-    }, 5000);
+    }, 20000);
     return () => clearInterval(interval);
   }, [total]);
+
+  // Manual control functions
+  const goNext = () => setActiveIndex((prev) => (prev + 1) % total);
+  const goPrev = () => setActiveIndex((prev) => (prev - 1 + total) % total);
 
   return (
     <Wrapper>
@@ -58,9 +63,14 @@ const Certificates   = () => {
             </div>
           );
         })}
+
+        <div className="button-wrapper">
+        <button className="prev" onClick={goPrev}>⟨</button>
+        <button className="next" onClick={goNext}>⟩</button>
+      </div>
       </div>
     </Wrapper>
   );
 };
 
-export default Certificates ;
+export default Certificates;

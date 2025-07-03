@@ -53,7 +53,7 @@ const Wrapper = styled.section`
   justify-content: center;
   align-items: flex-start;
   flex-wrap: nowrap;
-  padding: 80px 150px;
+  padding: 20px 150px;
   gap: 80px;
   color: #ffffff;
   overflow-x: hidden;
@@ -131,7 +131,7 @@ const Wrapper = styled.section`
 
 /* Right content */
 .about-content {
-  max-height: calc(100vh - 200px);
+  max-height: calc(100vh - 150px);
   overflow-y: auto;
   padding: 0 90px;
   padding-right: 20px;
